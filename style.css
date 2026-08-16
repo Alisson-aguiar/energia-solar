@@ -2187,64 +2187,113 @@ body {
     background: #171717;
 }
 
-/* ===== MENU MOBILE PROFISSIONAL ===== */
-#mobileMenu .mobile-menu-content {
-    background: rgba(5, 7, 12, 0.95);
+/* ===== MENU MOBILE - TELA CHEIA ===== */
+#mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    background: transparent;
+    pointer-events: none;
+}
+
+#mobileMenu.show {
+    pointer-events: auto;
+}
+
+#mobileMenu .mobile-menu-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 7, 12, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-radius: 16px;
-    margin-top: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.8);
-    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
+    animation: slideDown 0.35s ease forwards;
+    padding: 10px 0 20px;
 }
 
-/* ===== LOGO ===== */
-.mobile-logo {
-    padding-bottom: 16px;
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
-.mobile-logo a {
+/* ===== HEADER DO MENU MOBILE ===== */
+.mobile-menu-header {
+    flex-shrink: 0;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobile-menu-header .btn-close {
+    width: 32px;
+    height: 32px;
+    background-size: 16px;
+    opacity: 0.7;
     transition: opacity 0.2s;
 }
 
-.mobile-logo a:hover {
-    opacity: 0.8;
+.mobile-menu-header .btn-close:hover {
+    opacity: 1;
 }
 
-/* ===== LINKS DO MENU ===== */
+/* ===== LINKS DO MENU MOBILE ===== */
+.mobile-nav-links {
+    flex: 1;
+    padding: 16px 0;
+    overflow-y: auto;
+}
+
 .mobile-nav-links .nav-link {
-    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 20px !important;
+    margin: 0 12px;
+    border-radius: 12px;
     transition: all 0.3s ease;
     text-decoration: none;
-    position: relative;
-    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.mobile-nav-links .nav-link:last-child {
+    border-bottom: none;
 }
 
 .mobile-nav-links .nav-link:hover {
     background: rgba(247, 201, 72, 0.08);
-    color: #f7c948;
-    transform: translateX(4px);
+    transform: translateX(6px);
 }
 
 .mobile-nav-links .nav-link .icon-wrapper {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    background: rgba(247, 201, 72, 0.08);
+    border-radius: 12px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
 .mobile-nav-links .nav-link:hover .icon-wrapper {
-    background: rgba(247, 201, 72, 0.2) !important;
+    background: rgba(247, 201, 72, 0.18);
     transform: scale(1.05);
 }
 
 .mobile-nav-links .nav-link .icon-wrapper i {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .mobile-nav-links .nav-link .bi-chevron-right {
@@ -2257,10 +2306,16 @@ body {
     opacity: 1;
 }
 
-/* ===== CONTATO ===== */
+/* ===== CONTATO MOBILE ===== */
+.mobile-contact {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
 .mobile-contact .contact-item {
-    transition: background 0.3s ease;
+    padding: 8px 4px;
     border-radius: 8px;
+    transition: background 0.2s;
 }
 
 .mobile-contact .contact-item:hover {
@@ -2268,10 +2323,8 @@ body {
 }
 
 .mobile-contact .contact-item i {
-    width: 20px;
+    width: 24px;
     text-align: center;
-    font-size: 1.1rem;
-    flex-shrink: 0;
 }
 
 .mobile-contact .contact-item a {
@@ -2282,13 +2335,19 @@ body {
     color: #f7c948 !important;
 }
 
-/* ===== REDES SOCIAIS ===== */
+/* ===== REDES SOCIAIS MOBILE ===== */
+.mobile-social {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    gap: 16px !important;
+}
+
 .social-icon-mobile {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -2306,12 +2365,16 @@ body {
 }
 
 .social-icon-mobile i {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
-/* ===== BOTÃO CTA ===== */
+/* ===== BOTÃO CTA MOBILE ===== */
+.mobile-cta {
+    padding: 12px 20px;
+}
+
 .mobile-cta .btn {
-    font-size: 1rem;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
 }
 
@@ -2320,82 +2383,35 @@ body {
     box-shadow: 0 8px 30px -8px rgba(247, 201, 72, 0.3);
 }
 
-/* ===== SCROLLBAR ===== */
-#mobileMenu .mobile-menu-content::-webkit-scrollbar {
-    width: 4px;
-}
-
-#mobileMenu .mobile-menu-content::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-#mobileMenu .mobile-menu-content::-webkit-scrollbar-thumb {
-    background: rgba(247, 201, 72, 0.3);
-    border-radius: 4px;
-}
-
-#mobileMenu .mobile-menu-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(247, 201, 72, 0.5);
-}
-
-/* ===== ANIMAÇÃO DE ENTRADA ===== */
-#mobileMenu.collapsing {
-    transition: height 0.35s ease;
-}
-
-#mobileMenu .mobile-menu-content {
-    animation: slideDown 0.35s ease forwards;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px) scale(0.98);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 576px) {
-    #mobileMenu .mobile-menu-content {
-        padding: 1.25rem !important;
-        margin-top: 8px;
-        border-radius: 12px;
-    }
-
     .mobile-nav-links .nav-link {
+        padding: 14px 16px !important;
         font-size: 0.95rem;
-        padding: 12px 16px !important;
     }
 
     .mobile-nav-links .nav-link .icon-wrapper {
-        width: 36px;
-        height: 36px;
-    }
-
-    .mobile-nav-links .nav-link .icon-wrapper i {
-        font-size: 1rem;
-    }
-
-    .social-icon-mobile {
         width: 38px;
         height: 38px;
     }
 
-    .social-icon-mobile i {
-        font-size: 1rem;
+    .mobile-nav-links .nav-link .icon-wrapper i {
+        font-size: 1.1rem;
     }
 
-    .mobile-contact .contact-item {
-        font-size: 0.85rem;
-        padding: 10px 12px !important;
+    .mobile-nav-links .nav-link .text-white {
+        font-size: 1rem !important;
+    }
+
+    .social-icon-mobile {
+        width: 42px;
+        height: 42px;
+    }
+
+    .social-icon-mobile i {
+        font-size: 1.1rem;
     }
 }
-
 @media (max-width: 576px) {
     .como-funciona {
         padding: 0px 0 !important;

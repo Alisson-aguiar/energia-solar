@@ -2383,55 +2383,412 @@ body {
     box-shadow: 0 8px 30px -8px rgba(247, 201, 72, 0.3);
 }
 
-/* ===== RESPONSIVO ===== */
-@media (max-width: 576px) {
-    .mobile-nav-links .nav-link {
-        padding: 14px 16px !important;
-        font-size: 0.95rem;
+/* ============================================================
+   RESPONSIVIDADE COMPLETA - NOTEBOOK, TABLET E MOBILE
+   ============================================================ */
+
+/* ===== NOTEBOOK (1200px - 1399px) ===== */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .banner-content h1 {
+        font-size: 4.5rem !important;
     }
 
-    .mobile-nav-links .nav-link .icon-wrapper {
-        width: 38px;
-        height: 38px;
+    .banner-content h1 span {
+        font-size: inherit;
     }
 
-    .mobile-nav-links .nav-link .icon-wrapper i {
-        font-size: 1.1rem;
+    .banner-content .lead {
+        font-size: 1.15rem;
     }
 
-    .mobile-nav-links .nav-link .text-white {
-        font-size: 1rem !important;
+    .calculator-card {
+        padding: 2rem !important;
     }
 
-    .social-icon-mobile {
-        width: 42px;
-        height: 42px;
+    .calculator-card h2 {
+        font-size: 1.6rem !important;
     }
 
-    .social-icon-mobile i {
-        font-size: 1.1rem;
+    #economiaValor {
+        font-size: 3rem !important;
+    }
+
+    .marquee-track .marquee-item {
+        font-size: 72px;
+    }
+
+    .fs-financiamento {
+        font-size: 60px;
+    }
+
+    .fs-3 {
+        font-size: 52px !important;
+    }
+
+    .metric-card {
+        height: 320px;
+    }
+
+    .passo-card {
+        width: 220px;
+        height: 280px;
+    }
+
+    .passo-card::before {
+        width: 230px;
+        height: 300px;
+    }
+
+    .section-banner-sun {
+        height: 250px;
+        width: 250px;
+        right: 10px;
+        top: 40px;
     }
 }
-@media (max-width: 576px) {
-    .como-funciona {
-        padding: 0px 0 !important;
+
+/* ===== NOTEBOOK PEQUENO E TABLET LANDSCAPE (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner-content h1 {
+        font-size: 3.8rem !important;
     }
 
-    .como-funciona h2 {
-        font-size: 2.5rem;
+    .banner-content .lead {
+        font-size: 1.05rem;
     }
 
-    .formulario-box h2 {
-        font-size: 2rem !important;
+    .calculator-card {
+        padding: 1.75rem !important;
     }
 
-    .faq-section {
-        padding: 80px 0px !important;
+    .calculator-card h2 {
+        font-size: 1.4rem !important;
     }
 
-    .faq-section h2 {
+    #economiaValor {
         font-size: 2.5rem !important;
     }
+
+    .marquee-track .marquee-item {
+        font-size: 60px;
+    }
+
+    .fs-financiamento {
+        font-size: 52px;
+    }
+
+    .fs-3 {
+        font-size: 44px !important;
+    }
+
+    .metric-card {
+        height: 300px;
+    }
+
+    .passo-card {
+        width: 200px;
+        height: 260px;
+    }
+
+    .passo-card::before {
+        width: 210px;
+        height: 280px;
+    }
+
+    .section-banner-sun {
+        height: 220px;
+        width: 220px;
+        right: 0;
+        top: 30px;
+    }
+
+    .depoimento-item {
+        flex: 0 0 calc(50% - 12px);
+    }
+
+    .depoimentos-carousel {
+        padding: 0 50px;
+    }
+}
+
+/* ===== TABLET (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner-section {
+        padding-bottom: 80px;
+    }
+
+    .banner-content {
+        padding: 2rem 0 !important;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 3rem !important;
+        text-align: center;
+    }
+
+    .banner-content .lead {
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .banner-content .btn {
+        display: inline-block;
+        width: auto;
+        max-width: 320px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .calculator-card {
+        padding: 1.75rem !important;
+        margin-top: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .calculator-card h2 {
+        font-size: 1.5rem !important;
+    }
+
+    #economiaValor {
+        font-size: 2.5rem !important;
+    }
+
+    .marquee-track .marquee-item {
+        font-size: 3.5rem;
+    }
+
+    .marquee-track {
+        gap: 50px;
+    }
+
+    .fs-financiamento {
+        font-size: 56px;
+    }
+
+    .fs-3 {
+        font-size: 46px !important;
+    }
+
+    .metric-card {
+        height: 280px;
+        padding: 2rem !important;
+    }
+
+    .passo-card {
+        width: 100%;
+        height: auto;
+        min-height: 260px;
+        padding: 2rem !important;
+        margin: 15px 0;
+    }
+
+    .passo-card::before {
+        width: calc(100% + 10px);
+        height: calc(100% + 20px);
+        left: -5px;
+    }
+
+    .depoimento-item {
+        flex: 0 0 calc(50% - 12px);
+    }
+
+    .depoimentos-carousel {
+        padding: 0 50px;
+    }
+
+    .section-banner-sun {
+        height: 200px;
+        width: 200px;
+        right: -20px;
+        top: 20px;
+    }
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    .como-funciona h2,
+    .financiamento-section h2,
+    .depoimentos-section h2,
+    .vsl-section h2,
+    .faq-section h2 {
+        font-size: 2.75rem !important;
+    }
+}
+
+/* ===== MOBILE GRANDE (576px - 767px) ===== */
+@media (min-width: 576px) and (max-width: 767px) {
+    .banner-section {
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .banner-content {
+        padding: 1.5rem 0 !important;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem !important;
+        text-align: center;
+    }
+
+    .banner-content h1 br {
+        display: none;
+    }
+
+    .banner-content .lead {
+        font-size: 1.05rem;
+        padding: 0 0.5rem;
+        text-align: center;
+    }
+
+    .banner-content .btn {
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+    }
+
+    .calculator-card {
+        padding: 1.5rem !important;
+        border-radius: 16px !important;
+        margin-top: 1.5rem;
+    }
+
+    .calculator-card h2 {
+        font-size: 1.35rem !important;
+    }
+
+    .calculator-card .input-group-text {
+        font-size: 1.05rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .calculator-card .form-control {
+        font-size: 1.05rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .calculator-card .badge {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.85rem;
+    }
+
+    .calculator-card .btn {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    #economiaValor {
+        font-size: 2.2rem !important;
+    }
+
+    .economia-box {
+        padding: 1.25rem !important;
+    }
+
+    .economia-box .d-flex {
+        flex-wrap: wrap;
+        gap: 0.6rem !important;
+    }
+
+    .economia-box .d-flex span {
+        font-size: 0.85rem;
+    }
+
+    /* Marquee */
+    .marquee-track .marquee-item {
+        font-size: 2.75rem;
+    }
+
+    .marquee-track {
+        gap: 40px;
+    }
+
+    /* Financiamento */
+    .fs-financiamento {
+        font-size: 3rem;
+    }
+
+    .fs-3 {
+        font-size: 2.5rem !important;
+    }
+
+    .metric-card {
+        height: auto;
+        min-height: 200px;
+        padding: 1.75rem !important;
+    }
+
+    .passo-card {
+        width: 100%;
+        height: auto;
+        min-height: 240px;
+        padding: 1.75rem !important;
+        margin: 15px 0;
+    }
+
+    .passo-card::before {
+        width: calc(100% + 10px);
+        height: calc(100% + 20px);
+        left: -5px;
+    }
+
+    .formulario-box {
+        padding: 1.75rem !important;
+    }
+
+    /* Depoimentos */
+    .depoimento-item {
+        flex: 0 0 100%;
+    }
+
+    .depoimentos-carousel {
+        padding: 0 40px;
+    }
+
+    /* VSL */
+    .vsl-stats {
+        gap: 1.5rem !important;
+        flex-wrap: wrap;
+    }
+
+    .vsl-stats .fs-3 {
+        font-size: 2.5rem !important;
+    }
+
+    /* Títulos */
+    .display-4 {
+        font-size: 2.5rem !important;
+    }
+
+    .como-funciona h2,
+    .financiamento-section h2,
+    .depoimentos-section h2,
+    .vsl-section h2,
+    .faq-section h2 {
+        font-size: 2.25rem !important;
+    }
+
+    /* Section padding */
+    .vsl-section,
+    .financiamento-section,
+    .bg-dark {
+        padding: 70px 0 !important;
+    }
+
+    .py-5 {
+        padding: 80px 0 !important;
+    }
+
+}
+
+/* ===== MOBILE (até 575px) ===== */
+@media (max-width: 575px) {
 
     html,
     body {
@@ -2444,5 +2801,443 @@ body {
 
     .banner-section {
         padding-bottom: 50px;
+        min-height: auto;
+    }
+
+    .banner-content {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 2rem !important;
+        text-align: center;
+        line-height: 1.15;
+    }
+
+    .banner-content h1 br {
+        display: none;
+    }
+
+    .banner-content .lead {
+        font-size: 1rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    .banner-content .btn {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.5rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Calculadora */
+    .calculator-card {
+        padding: 1.25rem !important;
+        border-radius: 12px !important;
+        margin-top: 1.25rem;
+    }
+
+    .calculator-card .d-flex.align-items-center {
+        gap: 0.5rem !important;
+    }
+
+    .calculator-card h2 {
+        font-size: 1.15rem !important;
+    }
+
+    .calculator-card .bi-lightning-fill {
+        font-size: 1.4rem !important;
+    }
+
+    .calculator-card .input-group {
+        flex-wrap: nowrap;
+    }
+
+    .calculator-card .input-group-text {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.6rem;
+    }
+
+    .calculator-card .form-control {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.6rem;
+        min-width: 0;
+    }
+
+    .calculator-card .badge {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .calculator-card .btn {
+        font-size: 0.9rem;
+        padding: 0.65rem;
+    }
+
+    #economiaValor {
+        font-size: 1.7rem !important;
+    }
+
+    .economia-box {
+        padding: 1rem !important;
+    }
+
+    .economia-box .fs-1 {
+        font-size: 1.7rem !important;
+    }
+
+    .economia-box .d-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem !important;
+    }
+
+    .economia-box .d-flex span {
+        font-size: 0.75rem;
+    }
+
+    #openModalFormula {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.85rem;
+    }
+
+    /* Marquee */
+    .marquee-track .marquee-item {
+        font-size: 2.25rem;
+    }
+
+    .marquee-track {
+        gap: 30px;
+    }
+
+    /* Financiamento */
+    .fs-financiamento {
+        font-size: 2.5rem;
+    }
+
+    .fs-3 {
+        font-size: 2.25rem !important;
+    }
+
+    .metric-card {
+        height: auto;
+        min-height: 180px;
+        padding: 1.5rem !important;
+    }
+
+    .passo-card {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+        padding: 1.5rem !important;
+        margin: 12px 0;
+    }
+
+    .passo-card::before {
+        width: calc(100% + 10px);
+        height: calc(100% + 20px);
+        left: -5px;
+    }
+
+    .formulario-box {
+        padding: 1.25rem !important;
+    }
+
+    .formulario-box h2 {
+        font-size: 1.75rem !important;
+    }
+
+    /* Depoimentos */
+    .depoimento-item {
+        flex: 0 0 100%;
+    }
+
+    .depoimentos-carousel {
+        padding: 0 30px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .depoimento-card {
+        padding: 1.25rem !important;
+    }
+
+    /* VSL */
+    .vsl-stats {
+        flex-wrap: wrap;
+        gap: 1rem !important;
+    }
+
+    .vsl-stats>div {
+        flex: 1;
+        min-width: 80px;
+    }
+
+    .vsl-stats .fs-3 {
+        font-size: 2.25rem !important;
+    }
+
+    .vsl-section {
+        padding: 60px 0 !important;
+    }
+
+    .play-icon-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+
+    .play-icon-wrapper i {
+        font-size: 1.8rem;
+    }
+
+    .vsl-play-btn::before {
+        width: 80px;
+        height: 80px;
+    }
+
+    .vsl-benefits,
+    .vsl-cta,
+    .vsl-contato {
+        padding: 1.25rem !important;
+    }
+
+    /* Títulos */
+    .display-4 {
+        font-size: 2.25rem !important;
+    }
+
+    .como-funciona h2,
+    .financiamento-section h2,
+    .depoimentos-section h2,
+    .vsl-section h2,
+    .faq-section h2 {
+        font-size: 2rem !important;
+    }
+
+    /* Seções */
+    .vsl-section,
+    .financiamento-section,
+    .bg-dark {
+        padding: 60px 0 !important;
+    }
+
+    .py-5 {
+        padding: 60px 0 !important;
+    }
+
+    .faq-section {
+        padding: 60px 0 !important;
+    }
+
+    .depoimentos-section {
+        padding: 60px 0 !important;
+    }
+
+    .financiamento-section {
+        padding: 60px 0 !important;
+    }
+
+    /* Footer */
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-bottom .d-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-section .row>div {
+        margin-bottom: 1.5rem;
+    }
+
+    /* FAQ */
+    .accordion-button {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+    }
+
+    .accordion-button i {
+        font-size: 1rem;
+        margin-right: 8px !important;
+    }
+
+    .accordion-body {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        padding: 0 16px 16px 16px;
+    }
+
+    .faq-cta {
+        padding: 1.5rem !important;
+    }
+
+    .faq-cta .btn {
+        width: 100%;
+    }
+}
+
+/* ===== MOBILE MUITO PEQUENO (até 400px) ===== */
+@media (max-width: 400px) {
+    .banner-content h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .banner-content .lead {
+        font-size: 0.9rem;
+    }
+
+    .calculator-card {
+        padding: 1rem !important;
+    }
+
+    .calculator-card h2 {
+        font-size: 1rem !important;
+    }
+
+    .calculator-card .badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    #economiaValor {
+        font-size: 1.4rem !important;
+    }
+
+    .fs-financiamento {
+        font-size: 2.25rem;
+    }
+
+    .fs-3 {
+        font-size: 2rem !important;
+    }
+
+    .metric-card {
+        padding: 1.25rem !important;
+    }
+
+    .passo-card {
+        padding: 1.25rem !important;
+        min-height: 200px;
+    }
+
+    .display-4 {
+        font-size: 1.9rem !important;
+    }
+
+    .como-funciona h2,
+    .financiamento-section h2,
+    .depoimentos-section h2,
+    .vsl-section h2,
+    .faq-section h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .marquee-track .marquee-item {
+        font-size: 1.75rem;
+    }
+}
+
+/* ===== TELAS ULTRA-WIDE (1400px+) ===== */
+@media (min-width: 1400px) {
+    .banner-content h1 {
+        font-size: 86px !important;
+    }
+
+    .banner-content h1 span {
+        font-size: 106px;
+    }
+
+    .banner-content .lead {
+        font-size: 1.3rem;
+    }
+
+    .calculator-card {
+        padding: 2.5rem !important;
+    }
+
+    .calculator-card h2 {
+        font-size: 2rem !important;
+    }
+
+    #economiaValor {
+        font-size: 3.5rem !important;
+    }
+}
+/* ============================================================
+   SOL DECORATIVO - AJUSTE DE TAMANHO POR DISPOSITIVO
+   ============================================================ */
+
+/* Notebook padrão - mantém tamanho original */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .section-banner-sun {
+        height: 300px;
+        width: 300px;
+        right: 20px;
+        top: 50px;
+    }
+}
+
+/* Notebook pequeno */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .section-banner-sun {
+        height: 300px;
+        width: 300px;
+        right: 10px;
+        top: 50px;
+    }
+}
+
+/* ===== TABLET - SOL GRANDE ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-banner-sun {
+        height: 400px;
+        width: 400px;
+        right: -60px;
+        top: 40px;
+        opacity: 0.85;
+    }
+}
+
+/* ===== MOBILE GRANDE - SOL GRANDE ===== */
+@media (min-width: 576px) and (max-width: 767px) {
+    .section-banner-sun {
+        height: 380px;
+        width: 380px;
+        right: -80px;
+        top: 30px;
+        opacity: 0.8;
+    }
+}
+
+/* ===== MOBILE - SOL GRANDE ===== */
+@media (max-width: 575px) {
+    .section-banner-sun {
+        height: 340px;
+        width: 340px;
+        right: -100px;
+        top: 20px;
+        opacity: 0.75;
+    }
+}
+
+/* ===== MOBILE MUITO PEQUENO ===== */
+@media (max-width: 400px) {
+    .section-banner-sun {
+        height: 300px;
+        width: 300px;
+        right: -110px;
+        top: 10px;
+        opacity: 0.7;
     }
 }
